@@ -336,3 +336,21 @@ testimonialCards.forEach(card => {
         testimonialTrack.classList.remove('paused');
     });
 });
+
+// Mouse interactive radiating light effect on cards with glass blur
+const cards = document.querySelectorAll('.service-card, .case-study-card, .testimonial-card, .blog-card, .process-card');
+
+cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.removeProperty('--mouse-x');
+        card.style.removeProperty('--mouse-y');
+    });
+});
