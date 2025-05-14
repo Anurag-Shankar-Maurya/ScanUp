@@ -104,7 +104,7 @@ particlesJS('particles-js', {
             }
         },
         "size": {
-            "value": 12,
+            "value": 5,
             "random": true,
             "anim": {
                 "enable": true,
@@ -119,7 +119,7 @@ particlesJS('particles-js', {
         "move": {
             "enable": true,
             "speed": 1.5,
-            "direction": "top", // Bubbles rising
+            "direction": "bottom", // Bubbles rising
             "random": false,
             "straight": false,
             "out_mode": "out",
@@ -127,7 +127,7 @@ particlesJS('particles-js', {
         }
     },
     "interactivity": {
-        "detect_on": "window",
+        "detect_on": "canvas", // window or canvas or both
         "events": {
             "onhover": {
                 "enable": true,

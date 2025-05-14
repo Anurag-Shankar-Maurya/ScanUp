@@ -332,6 +332,8 @@ p {
     color: var(--white-hero);
     position: relative;
     overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
 }
 
 #home::before {
@@ -353,6 +355,7 @@ p {
     top: 0;
     left: 0;
     z-index: 0;
+    pointer-events: auto;
 }
 
 #home .container {
@@ -405,6 +408,7 @@ p {
     gap: 20px;
     justify-content: center;
     margin-top: 30px;
+    pointer-events: auto;
 }
 
 /* Animated Stats */
@@ -633,7 +637,7 @@ section h2::after {
 
 .testimonial-carousel {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     padding: 20px 0;
 }
 
